@@ -19,8 +19,8 @@ const app = express();
 
 
 app.use(cors({      
-  origin:'process.env.BASE_URL' , // Replace with your frontend URL
-  method:['GET', 'POST', 'PUT', 'DELETE'],
+  origin: process.env.BASE_URL || 'http://localhost:3000', // Frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization']
 }))
